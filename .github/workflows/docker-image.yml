@@ -21,13 +21,13 @@ jobs:
         password: ${{ secrets.DOCKER_TOKEN }}
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag star-173/node_app
+      run: docker build . --file Dockerfile --tag star173/node_app
 
     - name: Extract metadata (tags, labels) for Docker
       id: meta
       uses: docker/metadata-action@v3
       with:
-        images: star-173/node_app
+        images: star173/node_app
       
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
